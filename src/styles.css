@@ -19,6 +19,7 @@
  */
 
 @theme inline {
+  --font-sans: var(--font-sans);
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
@@ -59,77 +60,95 @@
   --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-ring: var(--sidebar-ring);
+  /* Restaurant brand tokens */
+  --color-restaurant-primary: var(--restaurant-primary);
+  --color-restaurant-primary-hover: var(--restaurant-primary-hover);
+  --color-restaurant-dark: var(--restaurant-dark);
+  --color-restaurant-light: var(--restaurant-light);
+  --color-restaurant-gray: var(--restaurant-gray);
+  --color-restaurant-whatsapp: var(--restaurant-whatsapp);
+  --color-restaurant-whatsapp-hover: var(--restaurant-whatsapp-hover);
 }
 
 :root {
   --radius: 0.625rem;
-  --background: oklch(1 0 0);
-  --foreground: oklch(0.129 0.042 264.695);
+  --font-sans: "Segoe UI", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  /* Brand palette */
+  --restaurant-primary: oklch(0.612 0.208 22.232);
+  --restaurant-primary-hover: oklch(0.540 0.190 22.807);
+  --restaurant-dark: oklch(0.328 0.068 257.280);
+  --restaurant-light: oklch(0.982 0.002 248.569);
+  --restaurant-gray: oklch(0.558 0.017 244.950);
+  --restaurant-whatsapp: oklch(0.761 0.201 149.761);
+  --restaurant-whatsapp-hover: oklch(0.686 0.186 148.979);
+  /* Semantic mapping */
+  --background: var(--restaurant-light);
+  --foreground: var(--restaurant-dark);
   --card: oklch(1 0 0);
-  --card-foreground: oklch(0.129 0.042 264.695);
+  --card-foreground: var(--restaurant-dark);
   --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.129 0.042 264.695);
-  --primary: oklch(0.208 0.042 265.755);
-  --primary-foreground: oklch(0.984 0.003 247.858);
-  --secondary: oklch(0.968 0.007 247.896);
-  --secondary-foreground: oklch(0.208 0.042 265.755);
-  --muted: oklch(0.968 0.007 247.896);
-  --muted-foreground: oklch(0.554 0.046 257.417);
-  --accent: oklch(0.968 0.007 247.896);
-  --accent-foreground: oklch(0.208 0.042 265.755);
-  --destructive: oklch(0.577 0.245 27.325);
-  --destructive-foreground: oklch(0.984 0.003 247.858);
-  --border: oklch(0.929 0.013 255.508);
-  --input: oklch(0.929 0.013 255.508);
-  --ring: oklch(0.704 0.04 256.788);
-  --chart-1: oklch(0.646 0.222 41.116);
-  --chart-2: oklch(0.6 0.118 184.704);
-  --chart-3: oklch(0.398 0.07 227.392);
-  --chart-4: oklch(0.828 0.189 84.429);
-  --chart-5: oklch(0.769 0.188 70.08);
-  --sidebar: oklch(0.984 0.003 247.858);
-  --sidebar-foreground: oklch(0.129 0.042 264.695);
-  --sidebar-primary: oklch(0.208 0.042 265.755);
-  --sidebar-primary-foreground: oklch(0.984 0.003 247.858);
-  --sidebar-accent: oklch(0.968 0.007 247.896);
-  --sidebar-accent-foreground: oklch(0.208 0.042 265.755);
-  --sidebar-border: oklch(0.929 0.013 255.508);
-  --sidebar-ring: oklch(0.704 0.04 256.788);
+  --popover-foreground: var(--restaurant-dark);
+  --primary: var(--restaurant-primary);
+  --primary-foreground: oklch(1 0 0);
+  --secondary: oklch(0.94 0.005 250);
+  --secondary-foreground: var(--restaurant-dark);
+  --muted: oklch(0.94 0.005 250);
+  --muted-foreground: var(--restaurant-gray);
+  --accent: var(--restaurant-dark);
+  --accent-foreground: oklch(1 0 0);
+  --destructive: var(--restaurant-primary);
+  --destructive-foreground: oklch(1 0 0);
+  --border: oklch(0.91 0.01 250);
+  --input: oklch(0.91 0.01 250);
+  --ring: var(--restaurant-primary);
+  --chart-1: oklch(0.612 0.208 22.232);
+  --chart-2: oklch(0.328 0.068 257.280);
+  --chart-3: oklch(0.761 0.201 149.761);
+  --chart-4: oklch(0.558 0.017 244.950);
+  --chart-5: oklch(0.540 0.190 22.807);
+  --sidebar: oklch(0.985 0.002 248.569);
+  --sidebar-foreground: var(--restaurant-dark);
+  --sidebar-primary: var(--restaurant-primary);
+  --sidebar-primary-foreground: oklch(1 0 0);
+  --sidebar-accent: oklch(0.94 0.005 250);
+  --sidebar-accent-foreground: var(--restaurant-dark);
+  --sidebar-border: oklch(0.91 0.01 250);
+  --sidebar-ring: var(--restaurant-primary);
 }
 
 .dark {
-  --background: oklch(0.129 0.042 264.695);
-  --foreground: oklch(0.984 0.003 247.858);
-  --card: oklch(0.208 0.042 265.755);
-  --card-foreground: oklch(0.984 0.003 247.858);
-  --popover: oklch(0.208 0.042 265.755);
-  --popover-foreground: oklch(0.984 0.003 247.858);
-  --primary: oklch(0.929 0.013 255.508);
-  --primary-foreground: oklch(0.208 0.042 265.755);
-  --secondary: oklch(0.279 0.041 260.031);
-  --secondary-foreground: oklch(0.984 0.003 247.858);
-  --muted: oklch(0.279 0.041 260.031);
-  --muted-foreground: oklch(0.704 0.04 256.788);
-  --accent: oklch(0.279 0.041 260.031);
-  --accent-foreground: oklch(0.984 0.003 247.858);
-  --destructive: oklch(0.704 0.191 22.216);
-  --destructive-foreground: oklch(0.984 0.003 247.858);
+  --background: var(--restaurant-dark);
+  --foreground: oklch(0.985 0.002 248.569);
+  --card: oklch(0.25 0.05 250);
+  --card-foreground: oklch(0.985 0.002 248.569);
+  --popover: oklch(0.25 0.05 250);
+  --popover-foreground: oklch(0.985 0.002 248.569);
+  --primary: var(--restaurant-primary);
+  --primary-foreground: oklch(1 0 0);
+  --secondary: oklch(0.35 0.04 250);
+  --secondary-foreground: oklch(0.985 0.002 248.569);
+  --muted: oklch(0.35 0.04 250);
+  --muted-foreground: oklch(0.75 0.02 250);
+  --accent: var(--restaurant-primary);
+  --accent-foreground: oklch(1 0 0);
+  --destructive: var(--restaurant-primary);
+  --destructive-foreground: oklch(1 0 0);
   --border: oklch(1 0 0 / 10%);
   --input: oklch(1 0 0 / 15%);
-  --ring: oklch(0.551 0.027 264.364);
-  --chart-1: oklch(0.488 0.243 264.376);
-  --chart-2: oklch(0.696 0.17 162.48);
-  --chart-3: oklch(0.769 0.188 70.08);
-  --chart-4: oklch(0.627 0.265 303.9);
-  --chart-5: oklch(0.645 0.246 16.439);
-  --sidebar: oklch(0.208 0.042 265.755);
-  --sidebar-foreground: oklch(0.984 0.003 247.858);
-  --sidebar-primary: oklch(0.488 0.243 264.376);
-  --sidebar-primary-foreground: oklch(0.984 0.003 247.858);
-  --sidebar-accent: oklch(0.279 0.041 260.031);
-  --sidebar-accent-foreground: oklch(0.984 0.003 247.858);
+  --ring: var(--restaurant-primary);
+  --chart-1: oklch(0.612 0.208 22.232);
+  --chart-2: oklch(0.328 0.068 257.280);
+  --chart-3: oklch(0.761 0.201 149.761);
+  --chart-4: oklch(0.558 0.017 244.950);
+  --chart-5: oklch(0.540 0.190 22.807);
+  --sidebar: oklch(0.25 0.05 250);
+  --sidebar-foreground: oklch(0.985 0.002 248.569);
+  --sidebar-primary: var(--restaurant-primary);
+  --sidebar-primary-foreground: oklch(1 0 0);
+  --sidebar-accent: oklch(0.35 0.04 250);
+  --sidebar-accent-foreground: oklch(0.985 0.002 248.569);
   --sidebar-border: oklch(1 0 0 / 10%);
-  --sidebar-ring: oklch(0.551 0.027 264.364);
+  --sidebar-ring: var(--restaurant-primary);
 }
 
 @layer base {
@@ -140,5 +159,10 @@
   body {
     background-color: var(--color-background);
     color: var(--color-foreground);
+    font-family: var(--font-sans);
+  }
+
+  html {
+    scroll-behavior: smooth;
   }
 }
