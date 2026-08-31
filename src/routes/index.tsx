@@ -204,7 +204,12 @@ function Index() {
 
       {/* Footer */}
       <footer className="bg-restaurant-dark py-7 text-center text-sm text-white">
-        <p>&copy; 2026 Restaurante Sabor & Tradição — Todos os direitos reservados.</p>
+        <p>
+          <Link to="/instalar" className="font-semibold underline underline-offset-4">
+            Instalar a app no ecrã principal
+          </Link>
+        </p>
+        <p className="mt-3">&copy; 2026 Restaurante Sabor & Tradição — Todos os direitos reservados.</p>
         <p className="mt-1 opacity-80">
           Desenvolvido por <strong className="text-restaurant-primary">Abibo Atumane</strong>
         </p>
