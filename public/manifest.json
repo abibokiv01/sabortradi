@@ -1,0 +1,15 @@
+{
+  "name": "Sabor & Tradição",
+  "short_name": "Sabor&Tradição",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f8f9fa",
+  "theme_color": "#e63946",
+  "icons": [
+    {
+      "src": "https://cdn-icons-png.flaticon.com/512/3170/3170733.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
